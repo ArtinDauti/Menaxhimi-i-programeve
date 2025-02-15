@@ -4,6 +4,7 @@ const int n=3;
 void Formomatricen(int X[][n],int m);
 void VektoriAntPozNegTeMatricesa(int Y[][n],int m, int P[],int &poz, int N[],int &neg);
 void SortoVektorin(int A[],int z);
+void ShtypVektorin(int Z[],int x);
 int main()
 {
     const int m=3;
@@ -15,6 +16,10 @@ int main()
     VektoriAntPozNegTeMatricesa(A,m,P,poz,N,neg);
     SortoVektorin(P,poz);
     SortoVektorin(N,neg);
+    cout<<"\nVektori me anetar pozitiv: ";
+    ShtypVektorin(P,poz);
+    cout<<"\nVektori me anetar negativ: ";
+    ShtypVektorin(N,neg);
     return 0;
 }
 //Formimi i matrices
@@ -68,4 +73,18 @@ void SortoVektorin(int A[],int z)
             
         }
     }
+}
+//Shtypja e vektorit
+void ShtypVektorin(int Z[],int x)
+{
+    cout<<"{";
+    for (int i=0; i<x; i++)
+    {
+        cout<<Z[i];
+        if (i<(x-1))
+        {
+            cout<<", ";
+        }
+    }
+    cout<<"}"<<endl;
 }
