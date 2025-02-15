@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+const int n=3;
+void Formomatricen(int X[][n],int m);
+int main()
+{
+    const int m=3;
+    int A[m][n];
+    Formomatricen(A, m);
+    return 0;
+}
+//Formimi i matrices
+void Formomatricen(int X[][n],int m)
+{
+    for (int i=0; i<m; i++)
+    {
+        for (int j=0; j<m; j++)
+        {
+            cout<<"A["<<i+1<<"]"<<"["<<j+1<<"]=";
+            cin>>X[i][j];
+        }
+    }
+}
